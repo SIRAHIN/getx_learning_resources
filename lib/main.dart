@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:getx_practice/app/modules/home%20Screen/view/home_view.dart';
 import 'package:getx_practice/app/modules/profile%20Screen/binding/profile_view_bindings.dart';
 import 'package:getx_practice/app/modules/profile%20Screen/view/profile_view.dart';
 
