@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:getx_practice/views/home_view.dart';
+import 'package:getx_practice/app/modules/home%20Screen/view/home_view.dart';
+import 'package:getx_practice/app/modules/profile%20Screen/binding/profile_view_bindings.dart';
+import 'package:getx_practice/app/modules/profile%20Screen/view/profile_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,10 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: 'GetX Practice ',
-      home:  HomeView(),
-      
+      home:  const ProfileView(),
+      initialBinding: ProfileViewBindings(),
     );
   }
 }

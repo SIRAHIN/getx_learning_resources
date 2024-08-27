@@ -21,16 +21,16 @@ class HomeView extends GetView<HomeViewController> {
             children: [
               GetBuilder<HomeViewController>(
                 id: 'fun1',
-                builder: (controller) {
+                builder: (ex) {
                   print('text 1');
                   return Text(controller.count1.toString());
                 },
               ),
               GetBuilder<HomeViewController>(
-                id: 'fun1',
-                builder: (controller) {
+                id: 'fun2',
+                builder: (ex) {
                   print('text 2');
-                  return Text((controller.count2.toString()));
+                  return Text((ex.count2.toString()));
                 },
               ),
               GetBuilder<HomeViewController>(
