@@ -5,11 +5,11 @@ import 'package:getx_practice/app/data/models/Respone%20Model/response_model.dar
 import 'package:getx_practice/app/services/network_caller.dart';
 
 class ProfileViewController extends GetxController {
-  RxBool _isLoading = false.obs;
+  final RxBool _isLoading = false.obs;
   RxBool get isLoading => _isLoading;
 
-  RxString _errorMessage = ''.obs;
-  RxString get errorMessage => _errorMessage;
+  // RxString _errorMessage = ''.obs;
+  // RxString get errorMessage => _errorMessage;
 
   //Model Class for User Profile Data
   ProfileModel? _profileModel;
@@ -30,11 +30,11 @@ class ProfileViewController extends GetxController {
         _profileModel = ProfileModel.fromJson(response.responseData);
         return true;
       } else {
-        Get.snackbar('Error', _errorMessage.value);
+        Get.snackbar('Error', 'SomeThing Went Wrong');
         return false;
       }
     } catch (ex) {
-      rethrow;
+       rethrow;
     } finally {
       _isLoading.value = false;
     }

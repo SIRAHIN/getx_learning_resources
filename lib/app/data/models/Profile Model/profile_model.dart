@@ -9,7 +9,7 @@ class ProfileModel {
     if (json['profiles'] != null) {
       profilesData = <ProfileData>[];
       json['profiles'].forEach((v) {
-        profilesData!.add(new ProfileData.fromJson(v));
+        profilesData!.add(ProfileData.fromJson(v));
       });
     }
   }

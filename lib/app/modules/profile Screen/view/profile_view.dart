@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_practice/app/modules/profile%20Screen/controller/profile_view_controller.dart';
+import 'package:getx_practice/app/style/theme/controller/theme_controller.dart';
 
 class ProfileView extends GetView<ProfileViewController> {
   const ProfileView({super.key});
@@ -9,7 +10,17 @@ class ProfileView extends GetView<ProfileViewController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Pull Down To Refersh New Data'),
+        title: const Text('Refersh New Data'),
+        actions: [
+          Obx(
+            () => Switch(
+              value: Get.find<ThemeController>().isDarkTheme.value,
+              onChanged: (value) {
+                Get.find<ThemeController>().onChnageAppTheme(value);
+              },
+            ),
+          )
+        ],
       ),
       body: Obx(
         () {
